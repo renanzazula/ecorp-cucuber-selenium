@@ -1,0 +1,153 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4245781323,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.setup()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Login at NCB Mobile or NCB Desktop",
+        "description": "",
+        "id": "login;login-at-ncb-mobile-or-ncb-desktop;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 72964,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3821011880,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User navigates to standard website \"http://dev.innofis.local:8100/#/login/login-login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://dev.innofis.local:8100/#/login/login-login\"",
+                  "offset": 35
+                }
+              ],
+              "location": "LoginSteps.user_navigates_to_standard_website(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 96101,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User  clicks on button headerLanguage",
+            "match": {
+              "location": "LoginSteps.userClicksOnButtonHeaderLanguage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7305165786,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters a valid company \"abahusain\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"abahusain\"",
+                  "offset": 28
+                }
+              ],
+              "location": "LoginSteps.user_enters_a_valid_company(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 168192830,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters a valid user  \"transferUser\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"transferUser\"",
+                  "offset": 26
+                }
+              ],
+              "location": "LoginSteps.user_enters_a_valid_user(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2338712632,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User enters a valid password \"abcd1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"abcd1234\"",
+                  "offset": 29
+                }
+              ],
+              "location": "LoginSteps.user_enters_a_valid_password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 330103182,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User clicks on button",
+            "match": {
+              "location": "LoginSteps.user_clicks_on_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 83310,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User should be taken to the dashboard listOfMenusAtDashBoard",
+            "match": {
+              "location": "LoginSteps.user_should_be_taken_to_the_dashboard_listOfMenusAtDashBoard()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "src/test/resources/feature/login/Login.feature",
+    "tags": []
+  }
+]

@@ -1,0 +1,7 @@
+/home/renanzazula/giv_home/standard-app-cucumber/standard-app-cucumber/src/main/java/eCorp/constant/ConstantsPropertiesFile.java
+/home/renanzazula/giv_home/standard-app-cucumber/standard-app-cucumber/src/main/java/eCorp/factory/DriverFactory.java
+/home/renanzazula/giv_home/standard-app-cucumber/standard-app-cucumber/src/main/java/eCorp/steps/MasterHooks.java
+/home/renanzazula/giv_home/standard-app-cucumber/standard-app-cucumber/src/main/java/eCorp/utils/ReadConfigFile.java
+/home/renanzazula/giv_home/standard-app-cucumber/standard-app-cucumber/src/main/java/eCorp/steps/login/LoginSteps.java
+/home/renanzazula/giv_home/standard-app-cucumber/standard-app-cucumber/src/main/java/eCorp/pages/BasePage.java
+/home/renanzazula/giv_home/standard-app-cucumber/standard-app-cucumber/src/main/java/eCorp/pages/login/Login.java
