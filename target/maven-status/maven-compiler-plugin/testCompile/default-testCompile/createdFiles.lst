@@ -1,1 +1,2 @@
-eCorp/runners/LoginRunner.class
+eCorp/runners/login/LoginRunner.class
+eCorp/runners/transfer/self/SelfTransferRunner.class

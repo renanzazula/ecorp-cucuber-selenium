@@ -1,4 +1,4 @@
-package eCorp.runners;
+package eCorp.runners.login;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/resources/feature/login"},
-        glue = "eCorp/steps",
+        glue = "eCorp/steps/login",
         monochrome = true,
         tags = {},
         strict = true,

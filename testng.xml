@@ -3,7 +3,8 @@
 <suite name="Cucumber Framework">
 	<test name="Cucumber Tests" junit="true">
 		<classes>
-			<class name="eCorp.runners.LoginRunner" />
+			<class name="eCorp.runners.login.LoginRunner" />
+			<class name="eCorp.runners.transfer.self.SelfTransferRunner" />
 		</classes>
 	</test>
 </suite>

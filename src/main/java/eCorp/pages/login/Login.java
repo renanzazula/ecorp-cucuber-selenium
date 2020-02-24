@@ -10,7 +10,7 @@ public class Login extends BasePage {
     private @FindBy(xpath = "//input[@id='username']") WebElement textField_username;
     private @FindBy(xpath = "//input[@id='password']") WebElement textField_password;
     //private @FindBy(xpath = "//button[@id='loadMethodsAndValidatePassword']") WebElement button_loginButton;
-     private @FindBy(xpath = "//button[@id='loginButton']") WebElement button_loginButton;
+    private @FindBy(xpath = "//button[@id='loginButton']") WebElement button_loginButton;
     private @FindBy(xpath = "//button[@id='headerLanguage']") WebElement button_headerLanguage;
     
     // Examples

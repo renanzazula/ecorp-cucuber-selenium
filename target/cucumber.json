@@ -3,151 +3,273 @@
     "line": 1,
     "elements": [
       {
-        "before": [
-          {
-            "result": {
-              "duration": 4245781323,
-              "status": "passed"
-            },
-            "match": {
-              "location": "MasterHooks.setup()"
-            }
-          }
-        ],
-        "line": 13,
-        "name": "Login at NCB Mobile or NCB Desktop",
+        "line": 34,
+        "name": "Make Self Transfer",
         "description": "",
-        "id": "login;login-at-ncb-mobile-or-ncb-desktop;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 72964,
-              "status": "passed"
-            },
-            "match": {
-              "location": "MasterHooks.tearDown(Scenario)"
-            }
-          }
-        ],
+        "id": "selftransfer;make-self-transfer;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3821011880,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 4,
-            "name": "User navigates to standard website \"http://dev.innofis.local:8100/#/login/login-login\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"http://dev.innofis.local:8100/#/login/login-login\"",
-                  "offset": 35
-                }
-              ],
-              "location": "LoginSteps.user_navigates_to_standard_website(String)"
-            },
+            "name": "User navigates to ncb \"http://dev.innofis.local:8100/#/login/login-login\"",
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 96101,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 5,
             "name": "User  clicks on button headerLanguage",
-            "match": {
-              "location": "LoginSteps.userClicksOnButtonHeaderLanguage()"
-            },
+            "match": {},
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 7305165786,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 6,
             "name": "User enters a valid company \"abahusain\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"abahusain\"",
-                  "offset": 28
-                }
-              ],
-              "location": "LoginSteps.user_enters_a_valid_company(String)"
-            },
+            "match": {},
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 168192830,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 7,
             "name": "User enters a valid user  \"transferUser\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"transferUser\"",
-                  "offset": 26
-                }
-              ],
-              "location": "LoginSteps.user_enters_a_valid_user(String)"
-            },
+            "match": {},
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2338712632,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 8,
             "name": "User enters a valid password \"abcd1234\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"abcd1234\"",
-                  "offset": 29
-                }
-              ],
-              "location": "LoginSteps.user_enters_a_valid_password(String)"
-            },
+            "match": {},
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 330103182,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 9,
             "name": "User clicks on button",
-            "match": {
-              "location": "LoginSteps.user_clicks_on_button()"
-            },
+            "match": {},
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 83310,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 10,
             "name": "User should be taken to the dashboard listOfMenusAtDashBoard",
-            "match": {
-              "location": "LoginSteps.user_should_be_taken_to_the_dashboard_listOfMenusAtDashBoard()"
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
             },
+            "line": 11,
+            "name": "User clicks on menu transfer at dashboard",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "User should be taken to the transfer menu sub page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "User clicks on menu transfer at dashboard",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "User should be taken to the transfer page transfersHome",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "User clicks on menu Self transfer",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "User click at selector AccountFrom",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "User should be taken to the Account from selector",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "User Selected \"05100000124510\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "User should be taken to the transfer page with account to selected available to selected",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 20,
+            "name": "User click at selector Account To",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "User should be taken to the Account To selector",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 22,
+            "name": "User Selected \"05100000249905\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 23,
+            "name": "User should be taken to the transfer page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "User add amount \"50\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 25,
+            "name": "User add instructions \"instructions\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 26,
+            "name": "Click at Proceed Button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 27,
+            "name": "User should be taken to the transfer confirm page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 28,
+            "name": "User add \"1234\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 29,
+            "name": "User should be taken to the transfer result page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "User click at button Finish",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 31,
+            "name": "User should be taken to the transfer home page",
+            "match": {},
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Login",
+    "name": "SelfTransfer",
     "description": "",
-    "id": "login",
+    "id": "selftransfer",
     "keyword": "Feature",
-    "uri": "src/test/resources/feature/login/Login.feature",
+    "uri": "src/test/resources/feature/transfer/selfTransfer/SelfTransfer.feature",
     "tags": []
   }
 ]
