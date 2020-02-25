@@ -1,6 +1,8 @@
 package eCorp.factory;
 
 import eCorp.constant.ConstantsPropertiesFile;
+import eCorp.pages.account.AccountPage;
+import eCorp.pages.account.AccountSelector;
 import eCorp.pages.home.DashBoard;
 import eCorp.pages.login.Login;
 import eCorp.pages.mfa.Mfa;
@@ -22,11 +24,14 @@ public class DriverFactory {
     private static final String FIREFOX = "firefox";
 
     public static WebDriver driver;
+
     public static Login login;
     public static Mfa mfa;
     public static DashBoard dashBoard;
     public static TransferHome transferHome;
     public static SelfTransfer selfTransfer;
+    public static AccountPage accountPage;
+    public static AccountSelector accountSelector;
 
     public WebDriver getDriver() {
         try {
@@ -62,6 +67,8 @@ public class DriverFactory {
                 dashBoard = PageFactory.initElements(driver, DashBoard.class);
                 transferHome = PageFactory.initElements(driver, TransferHome.class);
                 selfTransfer = PageFactory.initElements(driver, SelfTransfer.class);
+                accountPage = PageFactory.initElements(driver, AccountPage.class);
+                accountSelector= PageFactory.initElements(driver, AccountSelector.class);
             }
         }
         return driver;

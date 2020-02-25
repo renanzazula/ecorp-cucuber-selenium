@@ -1,43 +1,51 @@
 package eCorp.pages.transfer;
 
 import eCorp.pages.home.DashBoard;
+import eCorp.pages.transfer.inquiry.TransferInquiry;
+import eCorp.pages.transfer.international.InternationalTransfer;
+import eCorp.pages.transfer.local.LocalTransfer;
+import eCorp.pages.transfer.ncb.NcbTransfer;
+import eCorp.pages.transfer.quick.QuickPayTransfer;
 import eCorp.pages.transfer.self.SelfTransfer;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class TransferHome extends DashBoard {
 
-
-    private @FindBy(xpath = "//div[@id='transfersSelf']") WebElement button_transfersSelf;
-    
-//    private @FindBy(xpath = "//button[@id='transfersNcb']") WebElement button_transfersNcb;
-//    private @FindBy(xpath = "//button[@id='transfersLocal']") WebElement button_transfersLocal;
-//    private @FindBy(xpath = "//button[@id='transfersInternational']") WebElement button_transfersInternational;
-//    private @FindBy(xpath = "//button[@id='transfersQp']") WebElement button_transfersQp;
-//    private @FindBy(xpath = "//button[@id='transfersInquiry']") WebElement button_transfersInquiry;
+    private @FindBy(xpath = "//div[@id='transfersSelf']") WebElement selfTransfers;
+    private @FindBy(xpath = "//div[@id='transfersNcb']") WebElement ncbTransfer;
+    private @FindBy(xpath = "//div[@id='transfersLocal']") WebElement localTransfers;
+    private @FindBy(xpath = "//div[@id='transfersInternational']") WebElement internationalsTransfers;
+    private @FindBy(xpath = "//div[@id='transfersQp']") WebElement quickPayTransfers;
+    private @FindBy(xpath = "//div[@id='transfersInquiry']") WebElement transfersInquiry;
 
     public SelfTransfer clickAtOptionTransfersSelf() {
-        waitAndClickElement(button_transfersSelf);
+        waitAndClickElement(selfTransfers);
         return new SelfTransfer();
     }
 
-    public void clickAtOptionTransfersNcb() {
-        
+    public NcbTransfer clickAtOptionNcbTransfer() {
+        waitAndClickElement(ncbTransfer);
+        return new NcbTransfer();
     }
 
-    public void clickAtOptionTransfersLocal() {
-        
+    public LocalTransfer clickAtOptionLocalTransfers() {
+        waitAndClickElement(localTransfers);
+        return new LocalTransfer();
     }
 
-    public void clickAtOptionTransfersInternational() {
-        
+    public InternationalTransfer clickAtOptionInternationalTransfers() {
+        waitAndClickElement(internationalsTransfers);
+        return new InternationalTransfer();
     }
 
-    public void clickAtOptionTransfersQp() {
-        
+    public QuickPayTransfer clickAtOptionQuickPayTransfers() {
+        waitAndClickElement(quickPayTransfers);
+        return new QuickPayTransfer();
     }
 
-    public void clickAtOptionTransfersInquiry() {
-        
+    public TransferInquiry clickAtOptionTransfersInquiry() {
+        waitAndClickElement(transfersInquiry);
+        return new TransferInquiry();
     }
 }

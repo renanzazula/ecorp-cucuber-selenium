@@ -1,4 +1,4 @@
-package eCorp.pages.transfer.self;
+package eCorp.pages.transfer.quick;
 
 import eCorp.pages.transfer.TransferHome;
 

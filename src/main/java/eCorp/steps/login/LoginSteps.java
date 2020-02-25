@@ -45,17 +45,17 @@ public class LoginSteps extends DriverFactory {
 
     @And("User enters a valid company {string}")
     public void user_enters_a_valid_company(String corporateId) {
-        login.setTextField_corporateId(corporateId);
+        login.setCorporateId(corporateId);
     }
 
     @And("User enters a valid user {string}")
     public void user_enters_a_valid_user(String user) {
-        login.setTextField_username(user);
+        login.setUsername(user);
     }
 
     @And("User enters a valid password {string}")
     public void user_enters_a_valid_password(String password) {
-        login.setTextField_password(password);
+        login.setPassword(password);
     }
 
     @When("User clicks on button next")
@@ -71,12 +71,12 @@ public class LoginSteps extends DriverFactory {
 
     @And("User click at SMS, Otp option")
     public void user_click_at_SMS_Otp_option() {
-        mfa.clickAtButtonOption_Otp();
+        mfa.clickAtOptionOtp();
     }
 
     @And("User enters a valid otp {string}")
     public void user_enters_a_valid_otp(String otpValue) {
-        mfa.setTextField_mobileOtpSmsPreLogin(otpValue);
+        mfa.addOtp(otpValue);
     }
 
     @Then("User should be taken to the dashboard")
@@ -92,6 +92,6 @@ public class LoginSteps extends DriverFactory {
 
     @And("User click at SMS, Otp Option")
     public void userClickAtSMSOtpOption() {
-        mfa.clickAtButtonOption_Otp();
+        mfa.clickAtOptionOtp();
     }
 }

@@ -1,4 +1,4 @@
-package eCorp.steps.transfer.self;
+package eCorp.steps.transfer.international;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -9,13 +9,13 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import eCorp.factory.DriverFactory;
 
-public class SelfTransferSteps extends DriverFactory {
+public class InternationalTransferSteps extends DriverFactory {
 
     @Before
     public void setup() {
         driver = getDriver();
     }
-
+    
     // remove from here 
     @After
     public void tearDown(Scenario scenario) {
@@ -29,10 +29,10 @@ public class SelfTransferSteps extends DriverFactory {
             }
         } catch (Exception e) {
             // Fix this to add images to report
-            System.out.println(e);
+            System.out.println(e );
         }
     }
-
+    
     @Given("User navigates to standard website {string}")
     public void user_navigates_to_standard_website(String url) {
         login.getLoginPage(url);
@@ -41,6 +41,7 @@ public class SelfTransferSteps extends DriverFactory {
     @And("User  clicks on button headerLanguage")
     public void user_clicks_on_button_headerLanguage() {
         login.clickAtButton_headerLanguage();
+
     }
 
     @And("User enters a valid company {string}")
@@ -84,7 +85,7 @@ public class SelfTransferSteps extends DriverFactory {
         // TODO: find good way to do this...
         // Assert element at dashboard 
     }
-
+    
     @And("User clicks on menu transfer at dashboard")
     public void user_clicks_on_menu_transfer_at_dashboard() {
         dashBoard.clickAtButtonOptionTransfersHome();
@@ -209,5 +210,5 @@ public class SelfTransferSteps extends DriverFactory {
     public void userClickAtButtonFinish() {
         System.out.println("User click at button finish");
     }
-
+    
 }

@@ -6,26 +6,27 @@ import org.openqa.selenium.support.FindBy;
 
 public class Mfa extends Login {
 
-    private @FindBy(xpath = "//div[@id='OTP']") WebElement button_Otp;
-    private @FindBy(xpath = "//input[@id='mobileOtpSmsPrelogin']") WebElement textField_mobileOtpSmsPreLogin;
-        
-    public Mfa clickAtButtonOption_Otp(){
-        // waitAndClickElement(button_Otp);
+    private @FindBy(xpath = "//div[@id='OTP']") WebElement otp;
+    private @FindBy(xpath = "//input[@id='mobileOtpSmsPrelogin']") WebElement mobileOtpSmsPreLogin;
+
+    public Mfa clickAtOptionOtp(){
+        waitAndClickElement(otp);
         return new Mfa();
     }
 
-    public Mfa setTextField_mobileOtpSmsPreLogin(String otp) {
-        sendKeysToWebElement(textField_mobileOtpSmsPreLogin, otp);
+    public Mfa addOtp(String otp) {
+        sendKeysToWebElement(mobileOtpSmsPreLogin, otp);
         return new Mfa();
     }
-    
-    public class SoftToken {
-        // TODO:
+
+    public Mfa addSoftToken(String softToken) {
+        sendKeysToWebElement(null, softToken); //fixme:
+        return new Mfa();
     }
 
-    public class HardToken {
-        // TODO:
-
+    public Mfa addHardToken(String hardToken) {
+        sendKeysToWebElement(null, hardToken); //fixme:
+        return new Mfa();
     }
 
 }
