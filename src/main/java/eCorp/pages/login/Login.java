@@ -10,20 +10,26 @@ public class Login extends BasePage {
     private @FindBy(xpath = "//input[@id='corporateId']") WebElement textField_corporateId;
     private @FindBy(xpath = "//input[@id='username']") WebElement textField_username;
     private @FindBy(xpath = "//input[@id='password']") WebElement textField_password;
+    
     private @FindBy(xpath = "//button[@id='loginButton']") WebElement button_loginButton;
     private @FindBy(xpath = "//button[@id='headerLanguage']") WebElement button_headerLanguage;
-    
-    // Examples
-    //private @FindBy(xpath = "//button[@id='loadMethodsAndValidatePassword']") WebElement button_loginButton;
-    // private @FindBy(xpath = "//*[@ng-reflect-name='descricao']") WebElement textArea_Descricao;
-    // private @FindBy(xpath = "//*[@class='btn btn-secondary']") WebElement button_Cadastrar;
-    // private @FindBy(xpath = "//*[@ng-reflect-ng-class='[object Object]']") WebElement messsage_Sucesso;
 
     public Login() {
         super();
     }
 
-    
+    public Login getLoginPage(String url) {
+        driver.get(url);
+
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            // remove from here later
+            e.printStackTrace();
+        }
+
+        return new Login();
+    }
 
     public Login clickAtButton_headerLanguage() {
         waitAndClickElement(button_headerLanguage);
@@ -45,7 +51,7 @@ public class Login extends BasePage {
         return new Login();
     }
     
-    public Login clickAtButton() {
+    public Login clickAtButtonNext() {
         waitAndClickElement(button_loginButton);
         return new Login();
     }

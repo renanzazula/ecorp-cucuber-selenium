@@ -3,6 +3,7 @@ package eCorp.pages;
 import eCorp.factory.DriverFactory;
 import org.apache.commons.io.FileUtils;
 import org.jetbrains.annotations.NotNull;
+import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -32,7 +33,16 @@ public class BasePage extends DriverFactory {
 	/**********************************************************************************
 	 **CLICK METHODS
 	 **********************************************************************************/
-	public void waitAndClickElement(WebElement element) {
+	public void waitAndClickElement(WebElement element)   {
+
+		try {
+			Thread.sleep(50);
+		} catch (InterruptedException e) {
+			// remove from here later
+			e.printStackTrace();
+		}
+
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		boolean clicked = false;
 		int attempts = 0;
 		while (!clicked && attempts < 10) {

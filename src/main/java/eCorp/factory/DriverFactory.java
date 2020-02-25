@@ -1,8 +1,10 @@
 package eCorp.factory;
 
-
 import eCorp.constant.ConstantsPropertiesFile;
+import eCorp.pages.home.DashBoard;
 import eCorp.pages.login.Login;
+import eCorp.pages.mfa.Mfa;
+import eCorp.pages.transfer.TransferHome;
 import eCorp.pages.transfer.self.SelfTransfer;
 import eCorp.utils.ReadConfigFile;
 import org.openqa.selenium.WebDriver;
@@ -19,9 +21,11 @@ public class DriverFactory {
     private static final String CHROME = "chrome";
     private static final String FIREFOX = "firefox";
 
-
     public static WebDriver driver;
     public static Login login;
+    public static Mfa mfa;
+    public static DashBoard dashBoard;
+    public static TransferHome transferHome;
     public static SelfTransfer selfTransfer;
 
     public WebDriver getDriver() {
@@ -33,7 +37,7 @@ public class DriverFactory {
             switch (browserName) {
 
                 case FIREFOX:
-                   System.setProperty(WEBDRIVER_GECKO_DRIVER, "/usr/bin/geckodriver");
+                    System.setProperty(WEBDRIVER_GECKO_DRIVER, "/usr/bin/geckodriver");
 
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
@@ -51,9 +55,12 @@ public class DriverFactory {
         } catch (Exception e) {
             System.out.println("Unable to load browser: " + e.getMessage());
         } finally {
-            if(driver != null){
+            if (driver != null) {
                 driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
                 login = PageFactory.initElements(driver, Login.class);
+                mfa = PageFactory.initElements(driver, Mfa.class);
+                dashBoard = PageFactory.initElements(driver, DashBoard.class);
+                transferHome = PageFactory.initElements(driver, TransferHome.class);
                 selfTransfer = PageFactory.initElements(driver, SelfTransfer.class);
             }
         }

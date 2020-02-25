@@ -1,6 +1,8 @@
 package eCorp.steps.login;
 
-
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -8,6 +10,28 @@ import cucumber.api.java.en.When;
 import eCorp.factory.DriverFactory;
 
 public class LoginSteps extends DriverFactory {
+
+    @Before
+    public void setup() {
+        driver = getDriver();
+    }
+
+    // remove from here 
+    @After
+    public void tearDown(Scenario scenario) {
+        try {
+            // Fix this to add images to report
+            // scenario.embed(extractBytes("img.png"), "image/png");
+//            if (driver != null) {
+//                driver.manage().deleteAllCookies();
+//                driver.quit();
+//                driver = null;
+//            }
+        } catch (Exception e) {
+            // Fix this to add images to report
+            System.out.println(e );
+        }
+    }
     
     @Given("User navigates to standard website {string}")
     public void user_navigates_to_standard_website(String url) {
@@ -15,18 +39,18 @@ public class LoginSteps extends DriverFactory {
     }
 
     @And("User  clicks on button headerLanguage")
-    public void userClicksOnButtonHeaderLanguage() {
-      //   login.clickAtButton_headerLanguage();
+    public void user_clicks_on_button_headerLanguage() {
+        login.clickAtButton_headerLanguage();
     }
-    
+
     @And("User enters a valid company {string}")
     public void user_enters_a_valid_company(String corporateId) {
         login.setTextField_corporateId(corporateId);
     }
 
-    @And("User enters a valid user  {string}")
-    public void user_enters_a_valid_user(String username) {
-      login.setTextField_username(username);
+    @And("User enters a valid user {string}")
+    public void user_enters_a_valid_user(String user) {
+        login.setTextField_username(user);
     }
 
     @And("User enters a valid password {string}")
@@ -34,41 +58,40 @@ public class LoginSteps extends DriverFactory {
         login.setTextField_password(password);
     }
 
-    @When("User clicks on button")
-    public void user_clicks_on_button() {
-      login.clickAtButton();
+    @When("User clicks on button next")
+    public void user_clicks_on_button_next() {
+        login.clickAtButtonNext();
     }
 
-    @Then("User should be taken to the dashboard listOfMenusAtDashBoard")
-    public void user_should_be_taken_to_the_dashboard_listOfMenusAtDashBoard() {
-       login.clickAtButton();
+    @Then("User should be taken to the Mfa")
+    public void user_should_be_taken_to_the_Mfa() {
+        // TODO: find good way to do this... 
+        // Just Check type of MFA 
     }
 
-    //    @Given("User navigates to standard website {string}")
-//    public void user_navigates_to_standard_website(String url) {
-//        login.getLoginPage(url);
-//    }
-//
-//    @And("User enters a valid nome {string}")
-//    public void userEntersAValidNome(String nome) {
-//        login.setCorporateId(nome);
-//    }
-//
-//    @And("User enters a valid descricao {string}")
-//    public void user_enters_a_valid_descricao(String descricao) {
-//        login.setDescricao(descricao);
-//    }
-//
-//    @When("User clicks on button")
-//    public void userClicksOnButton() {
-//        login.clickAtButton();
-//    }
-//
-//    @Then("User should be taken to the list page with successful {string}")
-//    public void user_should_be_taken_to_the_list_page_with_successful_on(String message) {
-//        Assert.fail("error");
-//        Assert.assertEquals(message.toLowerCase().replaceAll("//s", ""), login
-//                .getMessageSuccess().toLowerCase().replaceAll("//s", ""));
-//    }
+    @And("User click at SMS, Otp option")
+    public void user_click_at_SMS_Otp_option() {
+        mfa.clickAtButtonOption_Otp();
+    }
 
+    @And("User enters a valid otp {string}")
+    public void user_enters_a_valid_otp(String otpValue) {
+        mfa.setTextField_mobileOtpSmsPreLogin(otpValue);
+    }
+
+    @Then("User should be taken to the dashboard")
+    public void user_should_be_taken_to_the_dashboard() {
+        // TODO: find good way to do this...
+        // Assert element at dashboard 
+    }
+
+    @When("User clicks on button Next")
+    public void userClicksOnButtonNext() {
+        login.clickAtButtonNext();
+    }
+
+    @And("User click at SMS, Otp Option")
+    public void userClickAtSMSOtpOption() {
+        mfa.clickAtButtonOption_Otp();
+    }
 }
