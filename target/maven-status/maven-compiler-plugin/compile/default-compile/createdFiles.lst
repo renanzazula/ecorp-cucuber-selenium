@@ -1,9 +1,0 @@
-eCorp/steps/login/LoginSteps.class
-eCorp/steps/transfer/self/SelfSteps.class
-eCorp/utils/ReadConfigFile.class
-eCorp/constant/ConstantsPropertiesFile.class
-eCorp/pages/transfer/self/SelfTransfer.class
-eCorp/steps/MasterHooks.class
-eCorp/pages/BasePage.class
-eCorp/factory/DriverFactory.class
-eCorp/pages/login/Login.class
