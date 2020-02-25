@@ -8,7 +8,7 @@ import cucumber.api.java.en.When;
 import eCorp.factory.DriverFactory;
 
 public class LoginSteps extends DriverFactory {
-
+    
     @Given("User navigates to standard website {string}")
     public void user_navigates_to_standard_website(String url) {
         login.getLoginPage(url);

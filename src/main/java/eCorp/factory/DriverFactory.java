@@ -3,6 +3,7 @@ package eCorp.factory;
 
 import eCorp.constant.ConstantsPropertiesFile;
 import eCorp.pages.login.Login;
+import eCorp.pages.transfer.self.SelfTransfer;
 import eCorp.utils.ReadConfigFile;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,6 +22,7 @@ public class DriverFactory {
 
     public static WebDriver driver;
     public static Login login;
+    public static SelfTransfer selfTransfer;
 
     public WebDriver getDriver() {
         try {
@@ -52,6 +54,7 @@ public class DriverFactory {
             if(driver != null){
                 driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
                 login = PageFactory.initElements(driver, Login.class);
+                selfTransfer = PageFactory.initElements(driver, SelfTransfer.class);
             }
         }
         return driver;
