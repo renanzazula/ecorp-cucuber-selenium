@@ -23,6 +23,7 @@ public class DriverFactory {
     private static final String CHROME = "chrome";
     private static final String FIREFOX = "firefox";
 
+
     public static WebDriver driver;
 
     public static Login login;
@@ -34,22 +35,25 @@ public class DriverFactory {
     public static AccountSelector accountSelector;
 
     public WebDriver getDriver() {
+
         try {
             // Read Config
             ReadConfigFile file = new ReadConfigFile();
             String browserName = file.getBrowser();
 
+            if(file.getOS().contains("windows")){
+                System.setProperty(WEBDRIVER_GECKO_DRIVER, "src/main/resources/other/geckodriver.exe");
+            } else{
+                System.setProperty(WEBDRIVER_GECKO_DRIVER, "/usr/bin/geckodriver");
+            }
+
             switch (browserName) {
-
                 case FIREFOX:
-                    System.setProperty(WEBDRIVER_GECKO_DRIVER, "/usr/bin/geckodriver");
-
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
                     driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
                     break;
-
                 case CHROME:
                     System.setProperty(WEBDRIVER_CHROME_DRIVER, ConstantsPropertiesFile.CHROME_DRIVER_DIRECTORY);
                     // CHROME OPTIONS
@@ -68,7 +72,7 @@ public class DriverFactory {
                 transferHome = PageFactory.initElements(driver, TransferHome.class);
                 selfTransfer = PageFactory.initElements(driver, SelfTransfer.class);
                 accountPage = PageFactory.initElements(driver, AccountPage.class);
-                accountSelector= PageFactory.initElements(driver, AccountSelector.class);
+                accountSelector = PageFactory.initElements(driver, AccountSelector.class);
             }
         }
         return driver;

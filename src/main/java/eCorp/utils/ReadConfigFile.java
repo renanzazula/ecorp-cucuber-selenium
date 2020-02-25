@@ -10,6 +10,7 @@ import java.util.Properties;
 
 public class ReadConfigFile {
 
+
 	private static final String BROWSER = "browser";
 
 	protected InputStream input = null;
@@ -23,7 +24,6 @@ public class ReadConfigFile {
 			if (input == null) {
 				throw new NullPointerException("Properties file is not ready");
 			}
-
 			//load a properties file from class path, inside static method
 			prop.load(input);
 		} catch (IOException e) {
@@ -34,4 +34,9 @@ public class ReadConfigFile {
 	public String getBrowser() {
 		return prop.getProperty(BROWSER);
 	}
+
+	public String getOS() {
+		return System.getProperty("os.name").toLowerCase();
+	}
+
 }

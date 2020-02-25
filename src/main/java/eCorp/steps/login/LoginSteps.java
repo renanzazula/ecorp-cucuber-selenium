@@ -8,6 +8,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import eCorp.factory.DriverFactory;
+import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 public class LoginSteps extends DriverFactory {
 
@@ -16,23 +19,25 @@ public class LoginSteps extends DriverFactory {
         driver = getDriver();
     }
 
-    // remove from here 
     @After
     public void tearDown(Scenario scenario) {
         try {
-            // Fix this to add images to report
-            // scenario.embed(extractBytes("img.png"), "image/png");
-//            if (driver != null) {
-//                driver.manage().deleteAllCookies();
-//                driver.quit();
-//                driver = null;
-//            }
+            if (driver != null && scenario.isFailed()) {
+                scenario.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png");
+               //File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+               //FileUtils.copyFile(scrFile, new File(".\\Screenshots\\_screenshot.png"));
+            }
+            if (driver != null) {
+                driver.manage().deleteAllCookies();
+                driver.quit();
+                driver = null;
+            }
         } catch (Exception e) {
             // Fix this to add images to report
-            System.out.println(e );
+            System.out.println(e);
         }
     }
-    
+
     @Given("User navigates to standard website {string}")
     public void user_navigates_to_standard_website(String url) {
         login.getLoginPage(url);
@@ -40,6 +45,7 @@ public class LoginSteps extends DriverFactory {
 
     @And("User  clicks on button headerLanguage")
     public void user_clicks_on_button_headerLanguage() {
+        Assert.fail("FAILSSSS");
         login.clickAtButton_headerLanguage();
     }
 
