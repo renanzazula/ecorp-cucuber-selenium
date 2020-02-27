@@ -13,4 +13,4 @@ Feature: Login
     Then User should be taken to the dashboard
     Examples:
       | url                                               | company   | user            | password | otp  |
-      | https://stackoverflow.com/ | abahusain | rzazulaapproval | abcd1234 | 1234 |
+      | http://dev.innofis.local:8101/#/login/login-login | abahusain | rzazulaapproval | abcd1234 | 1234 |

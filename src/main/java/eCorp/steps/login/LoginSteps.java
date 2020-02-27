@@ -8,9 +8,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import eCorp.factory.DriverFactory;
-import org.junit.Assert;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 
 public class LoginSteps extends DriverFactory {
 
@@ -23,7 +20,7 @@ public class LoginSteps extends DriverFactory {
     public void tearDown(Scenario scenario) {
         try {
             if (driver != null && scenario.isFailed()) {
-                scenario.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png");
+               // scenario.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png");
                //File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
                //FileUtils.copyFile(scrFile, new File(".\\Screenshots\\_screenshot.png"));
             }
@@ -45,7 +42,6 @@ public class LoginSteps extends DriverFactory {
 
     @And("User  clicks on button headerLanguage")
     public void user_clicks_on_button_headerLanguage() {
-        Assert.fail("FAILSSSS");
         login.clickAtButton_headerLanguage();
     }
 

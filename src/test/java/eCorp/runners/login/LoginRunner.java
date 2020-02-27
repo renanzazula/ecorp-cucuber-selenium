@@ -13,9 +13,9 @@ import org.junit.runner.RunWith;
         tags = {},
         strict = true,
         plugin = {"pretty",
-                "html:target/cucumber",
-                "json:target/cucumber.json",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                  "html:target/cucumber",
+                  "json:target/cucumber.json",
+                  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         })
 public class LoginRunner extends AbstractTestNGCucumberTests {
 

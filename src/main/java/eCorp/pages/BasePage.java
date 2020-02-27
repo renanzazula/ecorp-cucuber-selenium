@@ -3,7 +3,6 @@ package eCorp.pages;
 import eCorp.factory.DriverFactory;
 import org.apache.commons.io.FileUtils;
 import org.jetbrains.annotations.NotNull;
-import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -359,13 +358,11 @@ public class BasePage extends DriverFactory {
 
 	public static void captureScreenShot(){
 		File origen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
 		try {
 			FileUtils.copyFile(origen, new File("/output/imgs/"+ getFileName()));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	@NotNull

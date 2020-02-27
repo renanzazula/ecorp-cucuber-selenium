@@ -71,7 +71,7 @@ public class SelfTransferSteps extends DriverFactory {
 
     @And("User click at SMS, Otp option")
     public void user_click_at_SMS_Otp_option() {
-        mfa.clickAtOptionOtp();
+        //mfa.clickAtOptionOtp(); fixme:
     }
 
     @And("User enters a valid otp {string}")

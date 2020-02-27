@@ -11,7 +11,7 @@ public class Login extends BasePage {
     private @FindBy(xpath = "//input[@id='password']") WebElement password;
     private @FindBy(xpath = "//button[@id='loginButton']") WebElement loginButton;
     private @FindBy(xpath = "//button[@id='headerLanguage']") WebElement headerLanguage;
-
+    
     public Login() {
         super();
     }
@@ -22,7 +22,7 @@ public class Login extends BasePage {
     }
 
     public Login clickAtButton_headerLanguage() {
-        waitAndClickElement(headerLanguage);
+        // waitAndClickElement(headerLanguage);
         return new Login();
     }
 

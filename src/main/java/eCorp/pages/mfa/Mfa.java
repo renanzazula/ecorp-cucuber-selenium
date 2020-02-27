@@ -10,7 +10,7 @@ public class Mfa extends Login {
     private @FindBy(xpath = "//input[@id='mobileOtpSmsPrelogin']") WebElement mobileOtpSmsPreLogin;
 
     public Mfa clickAtOptionOtp(){
-        waitAndClickElement(otp);
+        // waitAndClickElement(otp);
         return new Mfa();
     }
 
