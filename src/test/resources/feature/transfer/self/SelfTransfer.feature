@@ -1,6 +1,6 @@
 Feature: SelfTransfer
-  
-  
+
+
   Scenario Outline: Make Self Transfer
     Given User navigates to standard website "<url>"
     And User  clicks on button headerLanguage

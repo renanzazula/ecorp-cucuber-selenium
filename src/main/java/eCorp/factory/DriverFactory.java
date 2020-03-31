@@ -1,13 +1,13 @@
 package eCorp.factory;
 
 import eCorp.constant.ConstantsPropertiesFile;
-import eCorp.pages.account.AccountPage;
-import eCorp.pages.account.AccountSelector;
-import eCorp.pages.home.DashBoard;
-import eCorp.pages.login.Login;
-import eCorp.pages.mfa.Mfa;
-import eCorp.pages.transfer.TransferHome;
-import eCorp.pages.transfer.self.SelfTransfer;
+import eCorp.environment.mobile.pages.account.AccountPage;
+import eCorp.environment.mobile.pages.account.AccountSelector;
+import eCorp.environment.mobile.pages.home.DashBoard;
+import eCorp.environment.mobile.pages.login.Login;
+import eCorp.environment.mobile.pages.mfa.Mfa;
+import eCorp.environment.mobile.pages.transfer.TransferHome;
+import eCorp.environment.mobile.pages.transfer.self.SelfTransfer;
 import eCorp.utils.ReadConfigFile;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
