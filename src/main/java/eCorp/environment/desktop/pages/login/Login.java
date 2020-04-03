@@ -1,16 +1,16 @@
-package eCorp.environment.mobile.pages.login;
+package eCorp.environment.desktop.pages.login;
 
-import eCorp.environment.mobile.BasePage;
+import eCorp.environment.desktop.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class Login extends BasePage {
-
+    
     private @FindBy(xpath = "//input[@id='corporateId']") WebElement corporateId;
     private @FindBy(xpath = "//input[@id='username']") WebElement username;
     private @FindBy(xpath = "//input[@id='password']") WebElement password;
-    private @FindBy(xpath = "//button[@id='loginButton']") WebElement loginButton;
-    private @FindBy(xpath = "//button[@id='headerLanguage']") WebElement headerLanguage;
+    private @FindBy(xpath = "//button[@id='loadMethodsAndValidatePassword']") WebElement loginButton;
+    private @FindBy(xpath = "//img[@class='lang-ar']") WebElement headerLanguage;
     
     public Login() {
         super();
@@ -22,7 +22,7 @@ public class Login extends BasePage {
     }
 
     public Login clickAtButton_headerLanguage() {
-        // waitAndClickElement(headerLanguage);
+        //waitAndClickElement(headerLanguage); fixme: this not work very well
         return new Login();
     }
 
@@ -42,7 +42,9 @@ public class Login extends BasePage {
     }
     
     public Login clickAtButtonNext() {
-        waitAndClickElement(loginButton);
+        // waitAndClickElement(loginButton);
+        clickOnElementUsingCustomTimeout(loginButton, driver, 500);
+        waitFewSeconds(4000);
         return new Login();
     }
 
